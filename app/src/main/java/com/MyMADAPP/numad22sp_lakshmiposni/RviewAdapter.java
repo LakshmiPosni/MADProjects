@@ -46,7 +46,6 @@ public class RviewAdapter extends RecyclerView.Adapter<RviewHolder> {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(currentItem.getUrl()));
             view.getContext().startActivity(intent);
-
         });
     }
 
