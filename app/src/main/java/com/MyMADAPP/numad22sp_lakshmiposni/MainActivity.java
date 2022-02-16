@@ -17,11 +17,19 @@ public class MainActivity extends AppCompatActivity {
 
         Button aboutMeBTN = findViewById(R.id.button);
         Button clickyClicky = findViewById(R.id.button2);
+        Button linkCollector = findViewById(R.id.button3);
+
+//        aboutMeBTN.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getApplicationContext(), "Lakshmi Posni (posni.l@northeastern.edu)", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         aboutMeBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Lakshmi Posni (posni.l@northeastern.edu)", Toast.LENGTH_SHORT).show();
+                aboutMe();
             }
         });
 
@@ -31,15 +39,27 @@ public class MainActivity extends AppCompatActivity {
                 clickyClicky();
             }
         });
+
+        linkCollector.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                linkCollector();
+            }
+        });
     }
 
-//    private void aboutMe(){
-//        Intent intent = new Intent(this, AboutMe.class);
-//        startActivity(intent);
-//    }
+    private void aboutMe(){
+        Intent intent = new Intent(this, AboutMe.class);
+        startActivity(intent);
+    }
 
     private void clickyClicky(){
         Intent intent = new Intent(this, ClickyClicky.class);
+        startActivity(intent);
+    }
+
+    private void linkCollector(){
+        Intent intent = new Intent(this, ItemActivity.class);
         startActivity(intent);
     }
 

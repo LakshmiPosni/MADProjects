@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NUMAD22Sp_LakshmiPosni</string>
+    <string name="item_name">Item name</string>
+    <string name="item_url">URL</string>
 </resources>
