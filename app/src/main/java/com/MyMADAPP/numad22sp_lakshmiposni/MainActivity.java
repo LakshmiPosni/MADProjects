@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button aboutMeBTN = findViewById(R.id.button);
         Button clickyClicky = findViewById(R.id.button2);
         Button linkCollector = findViewById(R.id.button3);
+        Button locator = findViewById(R.id.locatorBtn);
 
 //        aboutMeBTN.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 linkCollector();
             }
         });
+
+        locator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                locator();
+            }
+        });
     }
 
     private void aboutMe(){
@@ -60,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void linkCollector(){
         Intent intent = new Intent(this, ItemActivity.class);
+        startActivity(intent);
+    }
+
+    private void locator(){
+        Intent intent = new Intent(this, LocatorActivity.class);
         startActivity(intent);
     }
 
