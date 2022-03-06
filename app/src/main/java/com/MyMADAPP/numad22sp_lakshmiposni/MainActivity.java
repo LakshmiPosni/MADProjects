@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Button clickyClicky = findViewById(R.id.button2);
         Button linkCollector = findViewById(R.id.button3);
         Button locator = findViewById(R.id.locatorBtn);
+        Button service = findViewById(R.id.serviceBtn);
 
 //        aboutMeBTN.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                 locator();
             }
         });
+
+        service.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                service();
+            }
+        }));
     }
 
     private void aboutMe(){
@@ -73,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void locator(){
         Intent intent = new Intent(this, LocatorActivity.class);
+        startActivity(intent);
+    }
+
+    private void service(){
+        Intent intent = new Intent(this, AtYourServiceActivity.class);
         startActivity(intent);
     }
 
